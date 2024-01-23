@@ -49,17 +49,120 @@ body{
     border-radius: 8px;
     background: #FFF;
     box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.15);
-    padding: 58px 48px 33px 48px;
+    /* padding: 58px 48px 33px 48px; */
 }
 .sliderTop {
     display: flex;
     justify-content: space-between;
+    padding: 58px 48px 0px 48px;
 }
 #range {
     margin-top: 40px;
     width: 444px;
     height: 8px;
     flex-shrink: 0;
-    border-radius: 5px;
     background: #ECF0FB;
+    margin-left: 48px;
+}
+.monthYear{
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    align-items: center;
+    margin-top: 40px ;
+    margin-right: 48px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 22px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    top: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+.line{
+    width: 540px;
+    height: 1px;
+    flex-shrink: 0;
+    background: #ECF0FB;
+    margin-top: 45px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 48px 33px 48px;
+}
+.footerStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 11px;
+
+}
+.btn {
+    width: 170px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 20.5px;
+    background: #293356;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 600;
 }
